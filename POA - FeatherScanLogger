@@ -1,0 +1,20 @@
+POA - FeatherScanLogger  
+
+==== Activity Log - 2019 ====
+08/16~
+	- Saw ElKentaro's interview w/ Shannon Morse on YouTube. 
+
+08/18
+	- Download ElKentar's blog entry on the FeatherScanLogger
+	- Ordered parts from AdaFruit
+	- Re-established Arduino dev environment on TheoVI
+	- Added additional board manager to Arduino prefs for ESP8266 support  
+	- Added required libraries to ~/Documents/arduino/libraries 
+	- libs added: AdaFruit_SSD1306, AdaFruit-GFX-Library, RTCLib (AdaFruit fork) 
+
+> In-Progress:
+
+
+> Next:
+	- Test windows relative path (works on mac) 
+	
