@@ -13,8 +13,9 @@ POA - FeatherScanLogger
 	- libs added: AdaFruit_SSD1306, AdaFruit-GFX-Library, RTCLib (AdaFruit fork) 
 
 > In-Progress:
-
+	- Reestablish board USB connectivity to dev environment.
+	
 
 > Next:
-	- Test windows relative path (works on mac) 
+
 	
