@@ -1,0 +1,8 @@
+https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/using-arduino-ide
+
+https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
+
+Removed from c_cpp_properties.json, redundant.
+    "/Users/mazerlodge/Library/Arduino15/packages/esp8266/tools/**",
+    "/Users/mazerlodge/Library/Arduino15/packages/esp8266/hardware/esp8266/2.5.2/**",
+
