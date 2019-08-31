@@ -40,14 +40,38 @@ Single_Network Network[50];
 //Setup chip set for logger feather.
 const int chipSelect = 15;
 
+void showDate(DateTime now) {
+
+    char daysOfTheWeek[7] = {'U', 'M', 'T', 'W', 'R', 'F', 'S'};
+
+    Serial.print(now.year(), DEC);
+    Serial.print('-');
+    Serial.print(now.month(), DEC);
+    Serial.print('-');
+    Serial.print(now.day(), DEC);
+    Serial.print(" (");
+    Serial.print(daysOfTheWeek[now.dayOfTheWeek()]);
+    Serial.print(") ");
+    Serial.print(now.hour(), DEC);
+    Serial.print(':');
+    Serial.print(now.minute(), DEC);
+    Serial.print(':');
+    Serial.print(now.second(), DEC);
+    Serial.println();
+    
+}
 
 void setup() {
+  Serial.begin(9600); // Display to serial monitor
+  Serial.println("Setup begins....");
+
   //RTC related setup :
   if (! rtc.begin()) {
     Serial.println("Couldn't find RTC");
     while (1);
   }
 
+  Serial.println("Setting or getting the current time.");
   if (! rtc.initialized()) {
     Serial.println("RTC is NOT running!");
     // following line sets the RTC to the date & time this sketch was compiled
@@ -58,14 +82,13 @@ void setup() {
   }
   DateTime now = rtc.now();
   Serial.println(now.unixtime());
+  showDate(now);
 
   // Set WiFi to station mode and disconnect from an AP if it was previously connected
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
   delay(100);
 
-  Serial.begin(9600); // Display to serial monitor
-  Serial.println("Setup begins....");
   if (!SD.begin(chipSelect)) {
     Serial.println("Card failed, or not present");
     // don't do anything more:
