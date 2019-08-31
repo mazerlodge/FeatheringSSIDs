@@ -1,0 +1,9 @@
+Hardware Notes 
+
+Parts (BOM) 
+adafru.it/
+3046	Huzzah CPU, Wireless, Battery Charger 
+2922 	Clock (RTC) & Logger
+3045	Display 
+3417	Trippler Board 
+
